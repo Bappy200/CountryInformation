@@ -9,10 +9,13 @@ const useStyles = makeStyles({
     },
   });
   
+  const handlerCountry = (name, capital)=>{
+    alert(`Name: ${name}\n Capital: ${capital}`)
+  }
 function CountryItem({name, flag, capital}) {
     const classes = useStyles();
     return (
-        <Grid item md={4} sm={12}>
+        <Grid item md={4} sm={12} onClick={()=> handlerCountry(name, capital)}>
                 <Card className={classes.root}>
         <CardActionArea>
             <CardMedia

@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid';
 import React, { useEffect, useState } from 'react';
+import Header from '../Header/Header';
 import CountryItem from './CountryItem';
 import './Home.css';
 function Home() {
@@ -13,13 +14,17 @@ function Home() {
     }, [])
     console.log()
     return (
-        <section className='content'>
+        <>
+        <Header></Header>
+         <section className='content'>
              <Grid container spacing={3}>
                 {
                     countrys.map(country => <CountryItem key={country.name} {...country}/>)
                 }
              </Grid>
-        </section>
+            </section>
+        </>
+        
     )
 }
 

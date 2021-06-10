@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './Header.css'
 function Header() {
     return (
-        <section>
-            
+        <section className='header'>
+            <h1 className='title'>our world</h1>
         </section>
     )
 }
